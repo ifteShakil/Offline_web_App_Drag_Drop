@@ -1,0 +1,278 @@
+﻿
+/* Styling the Body element i.e. Color,
+        Font, Alignment */
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)),
+    url(https://images.pexels.com/photos/2166927/pexels-photo-2166927.jpeg?cs=srgb&dl=animal-aquarium-aquatic-2166927.jpg&fm=jpg)
+      no-repeat center center/cover;
+  font-family: Arial, Helvetica, sans-serif;
+}
+h1, h2{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+/* Styling the Form (Color, Padding, Shadow) */
+form {
+    position: relative;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 30px 20px;
+    box-shadow: 2px 5px 10px;
+}
+
+/* Styling form-control Class */
+.form-control {
+    text-align: left;
+    margin-bottom: 15px;
+    
+}
+
+    /* Styling form-control Label */
+    .form-control label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    /* Styling form-control input,
+        select, textarea */
+    .form-control input,
+    .form-control select,
+    .form-control textarea {
+        border: 1px solid #777;
+        border-radius: 2px;
+        font-family: inherit;
+        padding: 8px;
+        display: block;
+        width: 95%;
+        box-shadow: 0 0 3px 1px #227755;
+    }
+
+        /* Styling form-control Radio
+        button and Checkbox */
+        .form-control input[type="radio"],
+        .form-control input[type="checkbox"] {
+            display: inline-block;
+            width: auto;
+        }
+
+#role {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+        
+
+#role.active,
+#role:focus {
+  outline: rgb(210, 210, 15);
+  box-shadow: 0 0 10px 1px #06e73b;
+}
+
+
+/*===================*/
+#choose{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+
+}
+#choose label {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  #choose small {
+    font-size: 16px;
+    color: rgb(250, 255, 248);
+  }
+  
+  #choose input[type="checkbox"] {
+    display: -moz-inline-stack;
+  }
+  
+  /* #choose label[for^="inp-"] {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
+  
+  #choose label[for^="inp-"]::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #999;
+    border-radius: 3px;
+  }
+  
+  #choose label[for^="inp-"]::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    width: 10px;
+    height: 10px;
+    background-color: #999;
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+  }
+   */
+  #choose, #recommend input[type="checkbox"]:checked + label::after {
+    opacity: 1;
+  }
+
+#target {
+    border: 2px dashed #bbb;
+    border-radius: 5px;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+/* Styling Button */
+buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300vh;
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#btnSave {
+    text-decoration: none;
+    border: 1px solid rgb(146, 148, 248);
+    border-radius: 5px;
+    position: relative;
+    height: 8vh;
+    width: 20vh;
+    overflow: hidden;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  #btnSave:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
+  
+  #btnSave:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      transparent,
+      rgba(146, 148, 248, 0.4),
+      transparent
+    );
+    transition: all 650ms;
+  }
+  
+  #btnSave:hover:before {
+    left: 100%;
+  }
+
+
+#filesTable {
+    margin-top: 20px;
+    border-collapse: collapse;
+  width: 100%;
+}
+
+#headerRow {
+    background-color: #f2f2f2;
+}
+#headerRow th td{
+    text-align: center;
+  padding: 10px;
+}
+
+#contacts {
+    background-color:none;
+    width: 90%;
+    border: 1px solid #E1E1E1;
+    margin: auto;
+    padding: 0px;
+}
+
+    #contacts thead {
+        background-color: #e1e1e1;
+        color: #7C756D;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    #contacts tbody tr:nth-child(even) {
+        background-color: #eee;
+    }
+
+    #contacts th {
+        border-color: #7C756D;
+        border-style: none none solid;
+        border-width: 0 0 1px;
+    }
+
+    #contacts thead th, #contacts td {
+        font-weight: bold;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid black;
+    }
+
+  /* Style the table rows */
+  #contacts thead tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  /* Style the table cells */
+  #contacts thead tbody td {
+    padding: 10px;
+    border-bottom: 1px solid black;
+  }
+  
+  /* Style the recommended column */
+  #contacts thead tbody td:nth-child(5) {
+    text-align: center;
+  }
+  
+  /* Style the checkbox column */
+  #contacts thead tbody td:nth-child(6) {
+    text-align: center;
+  }
+  
+  /* Style the comment column */
+  #contacts thead tbody td:nth-child(7) {
+    width: 200px;
+  }
+  
+  /* Style the target column */
+  #contacts thead tbody td:nth-child(8) {
+    text-align: center;
+  }
+  
+  
+  /* Remove border from the last cell in each row */
+  #contacts thead tbody td:last-child {
+    border: none;
+  }

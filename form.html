@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Using Offline Web Storage and Drag and Drop Build a Survey Form 
+    </title>
+    
+    <link href="StyleSheet.css" rel="stylesheet" />
+    <script src="js/jQuery-3.1.1.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+  
+<body>
+    <h1>Offline Web Application with Drag and Drop</h1>
+    <!-- Create Form -->
+    <form id="form">
+
+        <!-- Details -->
+        <div class="form-control">
+            <label for="name" id="label-name">
+                Name
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="name"
+                   placeholder="Enter your name" />
+        </div>
+
+        <div class="form-control">
+            <label for="email" id="label-email">
+                Email
+            </label>
+
+            <!-- Input Type Email-->
+            <input type="email"
+                   id="email"
+                   placeholder="Enter your email" />
+        </div>
+
+        <div class="form-control">
+            <label for="age" id="label-age">
+                Age
+            </label>
+
+            <!-- Input Type Text -->
+            <input type="text"
+                   id="age"
+                   placeholder="Enter your age" />
+        </div>
+
+        <div class="form-control" tabindex="0">
+            <label for="role" id="label-role">
+                Which option best describes you?
+            </label>
+
+            <!-- Dropdown options -->
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="professional">
+                    Professional
+                </option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+
+        <div class="form-control" id="recommend">
+            <label>
+                Would you recommend IsDB-BISEW
+                to a friend?
+            </label>
+
+            <!-- Input Type Radio Button -->
+            <label for="recommed">
+                <input type="radio" id="yes" name="radio" value="Yes" checked>Yes
+            </label>
+
+            <label for="recommed">
+                <input type="radio" id="no" name="radio" value="No">No
+            </label>
+
+            <label for="recommed">
+                <input type="radio" id="maybe" name="radio" value="Maybe">Maybe
+            </label>
+        </div>
+
+        <div class="form-control" id="choose">
+            <label>
+                Languages and Frameworks known
+                <small>(Check all that apply)</small>
+            </label>
+            <!-- Input Type Checkbox -->
+            <label for="inp-1">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" C#">C#
+            </label>
+            <label for="inp-2">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" WDPF">WDPF
+            </label>
+            <label for="inp-3">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" GAB">GAB
+            </label>
+            <label for="inp-4">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" NT">NT
+            </label>
+            <label for="inp-5">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" Python">Python
+            </label>
+            <label for="inp-6">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" Java">Java
+            </label>
+            <label for="inp-7">
+                <input type="checkbox"
+                       name="inp" id="myCheckbox" value=" DDD">DDD
+            </label>
+
+        </div>
+
+        <div class="form-control">
+            <label for="comment">
+                Any comments or suggestions
+            </label>
+
+            <!-- multi-line text input control -->
+            <textarea name="comment" id="comment"
+                      placeholder="Enter your comment here">
+            </textarea>
+        </div>
+
+        <div class="form-control">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="target" name="img">
+                            Drag file here.
+                            
+                        </div>
+                        <table id="filesTable" class="table table-striped table-bordered">
+                            <thead>
+                                <tr id="headerRow">
+                                    <th> Name </th>
+                                    <th> Type </th>
+                                    <th> Size </th>
+                                    <th> Download </th>
+                                </tr>
+                            </thead>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+        <div class="buttons">
+            <button id="btnSave" name="save">Submit</button>
+        </div>
+    </form>
+    <hr>
+    <h2 id="currentAction"></h2>
+    <div>
+        <table id="contacts">
+            <thead>
+                <tr>
+                    <th>Name </th>
+                    <th>Email</th>
+                    <th>Age</th>
+                    <th>Role</th>
+                    <th>recommed</th>
+                    <th>Language</th>
+                    <th>comment</th>
+                    <th>Attachment</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+        </table>
+    </div>
+    <script src="Js/Drag_and_Drop.js"></script>
+    <script src="js/ContactBook.js"></script>
+</body>
+</html>
